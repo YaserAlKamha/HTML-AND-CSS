@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yaser AlKamha | Portfolio</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #333;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.navbar li {
+  margin: 0 20px;
+}
+.navbar a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s;
+}
+.navbar a:hover {
+  background-color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+.hero h1 {
+  font-size: 3rem;
+}
+.hero p {
+  font-size: 1.5rem;
+}
+
+/* Centered Image with Filter & Rounded Edges */
+.image-section {
+  text-align: center;
+  margin: 40px;
+}
+.profile-img {
+  width: 250px;
+  border-radius: 20px;
+  filter: brightness(95%) contrast(110%);
+}
+
+/* Text over Image */
+.text-image {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+}
+.text-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: white;
+  font-size: 1.6rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Table Section */
+.table-section {
+  padding: 40px;
+  text-align: center;
+}
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+th, td {
+  border: 2px solid #444;
+  padding: 12px 20px;
+}
+th {
+  background-color: #009688;
+  color: white;
+}
+
+/* Two Column */
+.two-column {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+.column {
+  width: 40%;
+  min-width: 300px;
+  background: #e1f5fe;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  height: 200px;
+}
+
+/* Hoverable Paragraph */
+.hover-section {
+  text-align: center;
+  padding: 30px;
+}
+.hover-section p {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.hover-section p:hover {
+  transform: scale(1.1);
+  color: #3f51b5;
+}
+
+/* Image Overlay Fade */
+.image-overlay {
+  text-align: center;
+  margin: 40px;
+}
+.fade-container {
+  position: relative;
+  display: inline-block;
+}
+.fade-container img {
+  width: 300px;
+  border-radius: 10px;
+}
+.fade-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.4s;
+}
+.fade-container:hover .fade-text {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Video Section */
+.video-section {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  transform: translateY(-50%);
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+</style>
+
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#table">Table</a></li>
+      <li><a href="#video">Video</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Yaser AlKamha</h1>
+    <p>Student • Web Developer • Designer</p>
+  </section>
+
+  <!-- Centered Image -->
+  <section id="about" class="image-section">
+    <h2>Hello, I'm Yaser!</h2>
+    <img src="https://cdn.pixabay.com/photo/2020/06/07/19/15/morocco-5271734_1280.jpg" class="profile-img" alt="Yaser AlKamha">
+  </section>
+
+  <!-- Text Over Image -->
+  <div class="text-image">
+    <img src="https://cdn.pixabay.com/photo/2023/04/05/13/01/animal-7901464_1280.jpg" alt="Overlay Background">
+    <div class="overlay-text">Let’s Create Something Awesome</div>
+  </div>
+
+  <!-- Table Section -->
+  <section id="table" class="table-section">
+    <h2>My Skills</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML & CSS</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>Good</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Two Column Layout -->
+  <section class="two-column">
+    <div class="column">
+      <h3>Education</h3>
+      <p>.</p>
+    </div>
+    <div class="column">
+      <h3>Goals</h3>
+      <p>.</p>
+    </div>
+  </section>
+
+  <!-- Hoverable Paragraph -->
+  <section class="hover-section">
+    <p>Hover over me to see a magical transformation!</p>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section class="image-overlay">
+    <div class="fade-container">
+      <img src="https://cdn.pixabay.com/photo/2020/03/24/20/42/namibia-4965457_1280.jpg" alt="Fade Image">
+      <div class="fade-text">Fading Overlay</div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video" class="video-section">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2023/01/23/147667-792078300_tiny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay">Welcome to My Creative Space</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Yaser AlKamha — All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
